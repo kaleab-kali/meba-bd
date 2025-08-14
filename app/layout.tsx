@@ -18,7 +18,9 @@ const dancingScript = Dancing_Script({
 export const metadata: Metadata = {
   title: "Happy Birthday Meba! 🎉",
   description: "A special birthday celebration for the amazing Meba",
-    generator: 'v0.app'
+  icons: {
+    icon: "/glowing-heart-golden-light.png",
+  },
 }
 
 export default function RootLayout({
@@ -27,8 +29,14 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en" className={`${inter.variable} ${dancingScript.variable}`}>
-      <body className="font-sans antialiased">{children}</body>
+    <html lang="en" className={`${inter.variable} ${dancingScript.variable}`}> 
+      <head>
+        <link rel="icon" href="/glowing-heart-golden-light.png" type="image/png" />
+        <title>Happy Birthday Meba! 🎉</title>
+      </head>
+      <body className="font-sans antialiased">
+        {children}
+      </body>
     </html>
   )
 }
