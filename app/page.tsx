@@ -43,8 +43,9 @@ export default function Home() {
       ) : (
         <>
           <HeroBanner />
-          <HorizontalGallery />
           <AnimatedWishes />
+          <HorizontalGallery />
+          
           <ThreeGiftBoxes />
           {/* Subtle confetti will continue in the background */}
         </>
